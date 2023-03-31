@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import ActionAreaCard from '@/components/card'
 
 const inter = Inter({ subsets: ['latin'] })
 
