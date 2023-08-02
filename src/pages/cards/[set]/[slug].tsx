@@ -4,15 +4,21 @@ import styles from '@/styles/Home.module.css'
 import TradingCard from '@/components/card';
 import { useRouter } from 'next/router'
 import RotateCard from '@/components/rotate';
+import { NavigateBeforeOutlined, NavigateNext } from '@mui/icons-material';
+import Link from 'next/link';
+import { Button, Table, TableCell, TableRow } from '@mui/material';
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const { asPath } = useRouter();
-  const splitPath = asPath.split('/')
+
+  const router = useRouter();
+  const splitPath = router.asPath.split('/')
   const set = splitPath[splitPath.length - 2]
   const image = splitPath[splitPath.length - 1]
+  const prevImage = Number(image) -1
+  const nextImage = Number(image) + 1
   return (
     <>
       <Head>
@@ -22,9 +28,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <RotateCard />
-      <TradingCard image={image} set={set}/>
 
+
+        <TradingCard image={image} set={set} />
+        <center>
+          <Table>
+            <TableRow>
+              <TableCell>
+                <Button onClick={() => router.push(`/cards/${set}/${prevImage}`)}><NavigateBeforeOutlined></NavigateBeforeOutlined></Button>
+              </TableCell>
+              <TableCell>
+                <RotateCard />
+
+              </TableCell>
+              <TableCell>
+                <Button onClick={() => router.push(`/cards/${set}/${nextImage}`)}><NavigateNext></NavigateNext></Button>
+              </TableCell>
+            </TableRow>
+
+          </Table>
+        </center>
       </main>
     </>
   )
