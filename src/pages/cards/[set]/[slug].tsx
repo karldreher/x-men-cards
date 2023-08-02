@@ -5,7 +5,6 @@ import TradingCard from '@/components/card';
 import { useRouter } from 'next/router'
 import RotateCard from '@/components/rotate';
 import { NavigateBeforeOutlined, NavigateNext } from '@mui/icons-material';
-import Link from 'next/link';
 import { Button, Table, TableCell, TableRow } from '@mui/material';
 
 
