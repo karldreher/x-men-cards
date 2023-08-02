@@ -9,6 +9,10 @@ import RotateCard from '@/components/rotate';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const { asPath } = useRouter();
+  const splitPath = asPath.split('/')
+  const set = splitPath[splitPath.length - 2]
+  const image = splitPath[splitPath.length - 1]
   return (
     <>
       <Head>
@@ -19,7 +23,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
       <RotateCard />
-      <TradingCard />
+      <TradingCard image={image} set={set}/>
 
       </main>
     </>

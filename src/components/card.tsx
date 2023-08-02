@@ -2,21 +2,19 @@ import * as React from 'react';
 import ReactCardFlip from "react-card-flip";
 import Card from '@mui/material/Card';
 import { useRouter } from 'next/router';
-import {decks} from '../resources/cards.json'
+import decks from '../resources/cards.js'
 
-export default function TradingCard() {
-  const { asPath } = useRouter();
-  const splitPath = asPath.split('/')
-  const set = splitPath[splitPath.length - 2]
-  const image = splitPath[splitPath.length - 1]
+export default function TradingCard(props:any) {
+  useRouter()
+  const root = decks.filter(a=>a.title==props.set)[0].root
   const [flip, setFlip] = React.useState(false);
   return (
     <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
       <Card sx={{ maxWidth: 345 }} variant="elevation">
-        <img src={`/img/${set}/${image}-f.jpeg`} onClick={async () => await setFlip(!flip)} />
+        <img src={`${root}/${props.image}-f.jpg`} onClick={async () => await setFlip(!flip)} />
       </Card>
       <Card sx={{ maxWidth: 345 }} variant="elevation">
-        <img src={`/img/${set}/${image}-b.jpeg`} onClick={async () => await setFlip(!flip)} />
+        <img src={`${root}/${props.image}-b.jpg`} onClick={async () => await setFlip(!flip)} />
       </Card>
     </ReactCardFlip>
 

@@ -1,11 +1,10 @@
 import Link from 'next/link';
 import * as React from 'react';
-import decks from '../resources/cards.json'
+import decks from '../resources/cards.js'
 
 export default function DeckList() {
-    const cardDecks = decks.decks
-    const links = cardDecks.map((element) => {
-        const randomStartCard = element.cards[Math.floor(Math.random()*element.cards.length)]
+    const links = decks.map((element) => {
+        const randomStartCard = Math.floor(Math.random()*element.cards)
         return (<li key={element.title}>
 
             <Link href={`/cards/${element.title}/${randomStartCard}`}>{element.title}</Link>
