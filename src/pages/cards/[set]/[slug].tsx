@@ -4,8 +4,9 @@ import styles from '@/styles/Home.module.css'
 import TradingCard from '@/components/card';
 import { useRouter } from 'next/router'
 import RotateCard from '@/components/rotate';
-import { NavigateBeforeOutlined, NavigateNext } from '@mui/icons-material';
-import { Button, Table, TableCell, TableRow } from '@mui/material';
+import NavButton from '@/components/navbutton';
+
+import { Table, TableCell, TableRow } from '@mui/material';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -34,14 +35,14 @@ export default function Home() {
           <Table>
             <TableRow>
               <TableCell>
-                <Button onClick={() => router.push(`/cards/${set}/${prevImage}`)}><NavigateBeforeOutlined></NavigateBeforeOutlined></Button>
+              <NavButton direction="prev"/>
               </TableCell>
               <TableCell>
                 <RotateCard />
 
               </TableCell>
               <TableCell>
-                <Button onClick={() => router.push(`/cards/${set}/${nextImage}`)}><NavigateNext></NavigateNext></Button>
+              <NavButton direction="next"/>
               </TableCell>
             </TableRow>
 
