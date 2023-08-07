@@ -15,6 +15,11 @@ export default function DeckList() {
             </li>)
     })
     return (
-        <ul>{links}</ul>
+        <div>
+			<p>Click a link below to explore the cards in that set.</p>
+            <br></br>
+            <ul>{links}</ul>
+        </div>
+
     )
 }
