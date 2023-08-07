@@ -1,3 +1,4 @@
+'use client'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
@@ -7,18 +8,25 @@ import RotateCard from '@/components/rotate';
 import NavButton from '@/components/navbutton';
 
 import { Table, TableCell, TableRow } from '@mui/material';
-
+import decks from '@/resources/cards';
+import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
   const router = useRouter();
+  if(router.isReady==false)
+  {
+    return <></>
+  }
   const splitPath = router.asPath.split('/')
   const set = splitPath[splitPath.length - 2]
+  if (set==undefined || set==""){
+    router.push('/')
+  }
+  const root = decks.filter(a=>a.title==set)[0].root
   const image = splitPath[splitPath.length - 1]
-  const prevImage = Number(image) -1
-  const nextImage = Number(image) + 1
   return (
     <>
       <Head>
@@ -30,7 +38,7 @@ export default function Home() {
       <main className={styles.main}>
 
 
-        <TradingCard image={image} set={set} />
+        <TradingCard image={image} set={set} root={root}/>
         <center>
           <Table>
             <TableRow>

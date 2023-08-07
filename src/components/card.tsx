@@ -2,11 +2,10 @@ import * as React from 'react';
 import ReactCardFlip from "react-card-flip";
 import Card from '@mui/material/Card';
 import { useRouter } from 'next/router';
-import decks from '../resources/cards.js'
 
-export default function TradingCard(props:any) {
-  useRouter()
-  const root = decks.filter(a=>a.title==props.set)[0].root
+export default function TradingCard(props: any) {
+  const router = useRouter()
+  const root = props.root
   const [flip, setFlip] = React.useState(false);
   return (
     <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
