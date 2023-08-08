@@ -2,7 +2,6 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 
 export default function RotateCard() {
-  const [rotate, setRotate] = React.useState(false);
   function rotateCard() {
     const card = document.querySelector('div.react-card-flip') as HTMLElement
     if (card) {
