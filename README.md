@@ -4,4 +4,5 @@ This is a frontend experiment.  No infringement on trademarks is intended.
 
 
 ## App
-This app is hosted at https://x-men-cards.vercel.app .
+
+This app is hosted at https://x-men-cards.vercel.app.
