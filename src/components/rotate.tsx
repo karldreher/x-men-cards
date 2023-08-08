@@ -5,7 +5,7 @@ export default function RotateCard() {
   function rotateCard() {
     const card = document.querySelector('div.react-card-flip') as HTMLElement
     if (card) {
-      card.style.transitionDuration = '1s';
+      card.style.transitionDuration = '.7s';
       if (card.style.transform == 'rotate(90deg)') {
         card.style.transform = ''
       }

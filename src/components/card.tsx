@@ -19,7 +19,7 @@ export default function TradingCard(props: any) {
   },[props.image])
 
   return (
-    <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
+    <ReactCardFlip isFlipped={flip} flipDirection="horizontal" flipSpeedBackToFront={.25} flipSpeedFrontToBack={.4}>
       <Card sx={{ maxWidth: 345 }} variant="elevation">
         <img src={`${root}/${props.image}-f.jpg`} onClick={async () => await setFlip(!flip)} />
       </Card>
