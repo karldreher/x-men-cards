@@ -1,0 +1,17 @@
+.deckslist {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.deckdescription {
+    margin-top: 1rem;
+    font-style: italic;
+
+
+}
+
+.ul {
+    display: flex;
+    flex-wrap: wrap;
+}
