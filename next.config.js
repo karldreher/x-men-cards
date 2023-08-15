@@ -1,6 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'uncannyxmen.net',
+        port: '',
+        pathname: '/sites/**',
+      },
+    ],
+  },
   async headers() {
     return [
         {
