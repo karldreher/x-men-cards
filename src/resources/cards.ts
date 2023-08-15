@@ -20,7 +20,7 @@ type Decks = Deck[]
 
 const deckList: Decks = [
     {
-        "title": "xmen92",
+        "title": "X-Men '92",
         "manufacturer": "Impel",
         "year": 1992,
         "cards": 100,
@@ -29,7 +29,7 @@ const deckList: Decks = [
     },
 
     {
-        "title": "xmen93",
+        "title": "X-Men '93",
         "manufacturer": "Skybox",
         "year": 1993,
         "cards": 100,
