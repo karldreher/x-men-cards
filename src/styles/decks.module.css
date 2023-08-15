@@ -1,0 +1,28 @@
+.deckcontainer {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+    margin-top: 0;
+    width: 20rem
+}
+
+.deckslist {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 5px ridge navy;
+    background-color: rgb(255, 255, 181);
+
+}
+
+
+.deckdescription {
+    margin-top: 1rem;
+    font-style: italic;
+
+}
+
+.ul, .h2 {
+    display: flex;
+    flex-wrap: wrap;
+}

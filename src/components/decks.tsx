@@ -1,24 +1,32 @@
 import Link from 'next/link';
 import * as React from 'react';
-import decks from '../resources/cards.js'
+import styles from '../styles/decks.module.css'
+import deckList from '@/resources/cards'
 
 export default function DeckList() {
-    const links = decks.map((element) => {
+    const links = deckList.map((element) => {
+        //todo: lpad random start card
         const randomStartCard = Math.floor(Math.random() * element.cards)
         return (
-            <li key={element.title}>
+            <div className={styles.deckcontainer} key={element.title}>
+            <Link href={`/cards/${element.title}/${randomStartCard}`} suppressHydrationWarning>
+                <li className={styles.deckslist} key={element.title}>
                 <h2>
-                    <Link href={`/cards/${element.title}/${randomStartCard}`}>{element.title}</Link>
+                    {element.title}
                 </h2>
-                <div className='description'>{element.description}</div>
-                <div className='description'>{element.cards} cards</div>
-            </li>)
+                <div className={styles.deckdescription}>manufacturer: {element.manufacturer}</div>
+                <div className={styles.deckdescription}>year: {element.year}</div>
+                <div className={styles.deckdescription}>cards: {element.cards}</div>
+                </li>
+            </Link>
+            </div>
+        )
     })
     return (
         <div>
-			<p>Click a link below to explore the cards in that set.</p>
+            <h2 className={styles.h2}>Select a box below to explore the cards in that set.</h2>
             <br></br>
-            <ul>{links}</ul>
+            <ul className={styles.ul}>{links}</ul>
         </div>
 
     )
