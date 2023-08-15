@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Image from 'next/image';
 import ReactCardFlip from "react-card-flip";
 import Card from '@mui/material/Card';
 import { useRouter } from 'next/router';
@@ -21,10 +22,10 @@ export default function TradingCard(props: any) {
   return (
     <ReactCardFlip isFlipped={flip} flipDirection="horizontal" flipSpeedBackToFront={.25} flipSpeedFrontToBack={.4}>
       <Card sx={{ maxWidth: 345 }} variant="elevation">
-        <img src={`${root}/${props.image}-f.jpg`} onClick={async () => await setFlip(!flip)} />
+        <Image alt="" width={300} height={415} src={`${root}/${props.image}-f.jpg`} onClick={async () => await setFlip(!flip)} />
       </Card>
       <Card sx={{ maxWidth: 345 }} variant="elevation">
-        <img src={`${root}/${props.image}-b.jpg`} onClick={async () => await setFlip(!flip)} />
+        <Image alt="" width={300} height={415} src={`${root}/${props.image}-b.jpg`} onClick={async () => await setFlip(!flip)} />
       </Card>
     </ReactCardFlip>
 
