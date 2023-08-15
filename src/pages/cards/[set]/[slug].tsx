@@ -8,7 +8,7 @@ import RotateCard from '@/components/rotate';
 import NavButton from '@/components/navbutton';
 
 import { Table, TableCell, TableRow } from '@mui/material';
-import decks from '@/resources/cards';
+import deckList from '@/resources/cards';
 import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,8 +25,8 @@ export default function Home() {
   if (set==undefined || set==""){
     router.push('/')
   }
-  const root = decks.filter(a=>a.title==set)[0].root
-  const lpad = decks.filter(a=>a.title==set)[0].lpad
+  const root = deckList.filter(a=>a.title==set)[0].root
+  const lpad = deckList.filter(a=>a.title==set)[0].lpad
   const image = splitPath[splitPath.length - 1]
   return (
     <>
