@@ -1,6 +1,9 @@
 .deckcontainer {
-    margin: 5rem;
-
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+    margin-top: 0;
+    width: 20rem
 }
 
 .deckslist {
@@ -19,7 +22,7 @@
 
 }
 
-.ul {
+.ul, .h2 {
     display: flex;
     flex-wrap: wrap;
 }

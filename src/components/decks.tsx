@@ -5,10 +5,11 @@ import deckList from '@/resources/cards'
 
 export default function DeckList() {
     const links = deckList.map((element) => {
+        //todo: lpad random start card
         const randomStartCard = Math.floor(Math.random() * element.cards)
         return (
-            <div className={styles.deckcontainer}>
-            <Link href={`/cards/${element.title}/${randomStartCard}`}>
+            <div className={styles.deckcontainer} key={element.title}>
+            <Link href={`/cards/${element.title}/${randomStartCard}`} suppressHydrationWarning>
                 <li className={styles.deckslist} key={element.title}>
                 <h2>
                     {element.title}
@@ -23,7 +24,7 @@ export default function DeckList() {
     })
     return (
         <div>
-            <h2>Select a box below to explore the cards in that set.</h2>
+            <h2 className={styles.h2}>Select a box below to explore the cards in that set.</h2>
             <br></br>
             <ul className={styles.ul}>{links}</ul>
         </div>
