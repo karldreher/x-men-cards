@@ -5,7 +5,6 @@ import deckList from '@/resources/cards'
 
 export default function DeckList() {
     const links = deckList.map((element) => {
-        //todo: lpad random start card
         const randomStartCard = Math.floor(Math.random() * element.cards) as number
         const startCard = (String(Number(randomStartCard) + 1)).padStart(element.lpad, "0")
         return (
