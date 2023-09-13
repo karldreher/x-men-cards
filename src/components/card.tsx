@@ -2,10 +2,8 @@ import * as React from 'react';
 import Image from 'next/image';
 import ReactCardFlip from "react-card-flip";
 import Card from '@mui/material/Card';
-import { useRouter } from 'next/router';
 
 export default function TradingCard(props: any) {
-  const router = useRouter()
   const root = props.root
   const [flip, setFlip] = React.useState(false);
 
