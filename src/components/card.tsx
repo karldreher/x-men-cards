@@ -22,10 +22,10 @@ export default function TradingCard(props: any) {
   return (
     <ReactCardFlip isFlipped={flip} flipDirection="horizontal" flipSpeedBackToFront={.25} flipSpeedFrontToBack={.4}>
       <Card sx={{ maxWidth: 345 }} variant="elevation">
-        <Image alt="" width={300} height={415} src={`${root}/${props.image}-f.jpg`} onClick={async () => await setFlip(!flip)} />
+        <Image priority={true} placeholder="blur" blurDataURL="/favicon.ico" alt="" width={300} height={415} src={`${root}/${props.image}-f.jpg`} onClick={async () => await setFlip(!flip)} />
       </Card>
       <Card sx={{ maxWidth: 345 }} variant="elevation">
-        <Image alt="" width={300} height={415} src={`${root}/${props.image}-b.jpg`} onClick={async () => await setFlip(!flip)} />
+        <Image priority={true} placeholder="blur" blurDataURL="/favicon.ico" alt="" width={300} height={415} src={`${root}/${props.image}-b.jpg`} onClick={async () => await setFlip(!flip)} />
       </Card>
     </ReactCardFlip>
 
