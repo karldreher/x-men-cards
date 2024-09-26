@@ -6,6 +6,7 @@ import TradingCard from '@/components/card';
 import { useRouter } from 'next/router'
 import RotateCard from '@/components/rotate';
 import NavButton from '@/components/navbutton';
+import Header from '@/components/header';
 
 import { Table, TableCell, TableRow } from '@mui/material';
 import deckList from '@/resources/cards';
@@ -36,7 +37,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>X-Men Cards</h1>
+      <Header/>
 
       <main className={styles.main}>
 
