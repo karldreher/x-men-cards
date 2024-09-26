@@ -1,8 +1,7 @@
-import * as React from 'react';
 import Button from '@mui/material/Button';
 
 export default function RotateCard() {
-  function rotateCard() {
+  function rotate() {
     const card = document.querySelector('div.react-card-flip') as HTMLElement
     if (card) {
       card.style.transitionDuration = '.7s';
@@ -16,7 +15,7 @@ export default function RotateCard() {
   }
   return (
 
-    <Button variant="outlined" onClick={rotateCard}>Rotate</Button>
+    <Button variant="outlined" onClick={rotate}>Rotate</Button>
 
 
   );

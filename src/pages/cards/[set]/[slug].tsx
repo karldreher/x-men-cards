@@ -10,7 +10,6 @@ import Header from '@/components/header';
 
 import { Table, TableCell, TableRow } from '@mui/material';
 import deckList from '@/resources/cards';
-import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -1,13 +1,13 @@
-import * as React from 'react';
+import {useState,useEffect} from 'react';
 import Image from 'next/image';
 import ReactCardFlip from "react-card-flip";
 import Card from '@mui/material/Card';
 
 export default function TradingCard(props: any) {
   const root = props.root
-  const [flip, setFlip] = React.useState(false);
+  const [flip, setFlip] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     //always ensure that when image changes, we land on (front) card
     setFlip(false)
     //await component load and set rotation to 0, on image change
