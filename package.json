@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "biome": "npx @biomejs/biome",
+    "biome-fix-all": "npx @biomejs/biome check --fix --unsafe",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
