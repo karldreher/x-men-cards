@@ -26,6 +26,7 @@ type Deck = {
      */
     lpad: number
     //todo: special cards
+    //TODO add `omit` to Deck type whih is a list of cards to exclude by number
 
 }
 type Decks = Deck[]

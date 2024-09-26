@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import * as React from 'react';
 import styles from '../styles/decks.module.css'
 import deckList from '@/resources/cards'
 
