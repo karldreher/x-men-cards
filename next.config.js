@@ -20,6 +20,7 @@ const nextConfig = {
                 { key: "Access-Control-Allow-Origin", value: "https://uncannyxmen.net" },
                 { key: "Access-Control-Allow-Methods", value: "GET" },
                 { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
+                { key: "Cache-Control", value: "public, s-maxage=3600"}
             ]
         }
     ]
