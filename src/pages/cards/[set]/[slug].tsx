@@ -16,17 +16,17 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   const router = useRouter();
-  if(router.isReady==false)
+  if(router.isReady===false)
   {
     return <></>
   }
   const splitPath = router.asPath.split('/')
   const set = splitPath[splitPath.length - 2]
-  if (set==undefined || set==""){
+  if (set===undefined || set===""){
     router.push('/')
   }
-  const root = deckList.filter(a=>a.title==set)[0].root
-  const lpad = deckList.filter(a=>a.title==set)[0].lpad
+  const root = deckList.filter(a=>a.title===set)[0].root
+  const lpad = deckList.filter(a=>a.title===set)[0].lpad
   const image = splitPath[splitPath.length - 1]
   return (
     <>
