@@ -1,28 +1,30 @@
 .deckcontainer {
     margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     margin-top: 0;
-    width: 20rem
+    width: 20rem;
 }
 
 .deckslist {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border: 5px ridge navy;
-    background-color: rgb(255, 255, 181);
-
+    border: 5px solid gradient(rgba(1, 65, 255, 0.4), rgba(124, 153, 241, 0));
+    background-color: #343857;
+    border-radius: 10px;
+    color: #E8D77B;
 }
 
 
 .deckdescription {
     margin-top: 1rem;
     font-style: italic;
+    color: #E8D77B;
+    text-align: right;
 
 }
 
-.ul, .h2 {
-    display: flex;
+.ul{
     flex-wrap: wrap;
 }
