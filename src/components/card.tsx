@@ -3,8 +3,16 @@ import Image from 'next/image';
 import ReactCardFlip from "react-card-flip";
 import Card from '@mui/material/Card';
 
-export default function TradingCard(props: any) {
+type TradingCardProps = {
+  image: string
+  set: string
+  root: string
+  lpad: number
+}
+
+export default function TradingCard(props: TradingCardProps) {
   const root = props.root
+  const image = props.image
   const [flip, setFlip] = useState(false);
 
   useEffect(() => {
@@ -15,7 +23,7 @@ export default function TradingCard(props: any) {
     if (card){
       card.style.transform = 'rotate(0deg)'
     }
-  },[props.image])
+  },[image])
 
   return (
     <ReactCardFlip isFlipped={flip} flipDirection="horizontal" flipSpeedBackToFront={.25} flipSpeedFrontToBack={.4}>

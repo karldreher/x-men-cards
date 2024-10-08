@@ -24,7 +24,7 @@ export default function DeckList() {
     return (
         <div>
             <h2 className={styles.h2}>Select a box below to explore the cards in that set.</h2>
-            <br></br>
+            <br/>
             <ul className={styles.ul}>{links}</ul>
         </div>
 

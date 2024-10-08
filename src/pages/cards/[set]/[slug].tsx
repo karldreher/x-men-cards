@@ -1,6 +1,5 @@
 'use client'
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import TradingCard from '@/components/card';
 import { useRouter } from 'next/router'
@@ -11,22 +10,20 @@ import Header from '@/components/header';
 import { Table, TableCell, TableRow } from '@mui/material';
 import deckList from '@/resources/cards';
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
 
   const router = useRouter();
-  if(router.isReady==false)
+  if(router.isReady===false)
   {
     return <></>
   }
   const splitPath = router.asPath.split('/')
   const set = splitPath[splitPath.length - 2]
-  if (set==undefined || set==""){
+  if (set===undefined || set===""){
     router.push('/')
   }
-  const root = deckList.filter(a=>a.title==set)[0].root
-  const lpad = deckList.filter(a=>a.title==set)[0].lpad
+  const root = deckList.filter(a=>a.title===set)[0].root
+  const lpad = deckList.filter(a=>a.title===set)[0].lpad
   const image = splitPath[splitPath.length - 1]
   return (
     <>
@@ -46,10 +43,10 @@ export default function Home() {
           {/* Table below card for navigation  */}
           <Table>
             <TableRow>
-
+              
               {/* Navbutton for previous card  */}
               <TableCell>
-              <NavButton direction="prev"  lpad={lpad}/>
+              <NavButton direction="prev" lpad={lpad}/>
               </TableCell>
 
               {/* Button for rotating the card  */}
@@ -59,11 +56,10 @@ export default function Home() {
 
               {/* Navbutton for next card */}
               <TableCell>
-              <NavButton direction="next"  lpad={lpad}/>
+              <NavButton direction="next" lpad={lpad}/>
               </TableCell>
 
             </TableRow>
-
           </Table>
         </center>
       </main>
