@@ -46,7 +46,7 @@ export default function Home() {
 
       <main className={styles.main}>
 
-        <TradingCard image={image} set={set} root={root} lpad={lpad}/>
+        <TradingCard image={image} title={set} root={root} lpad={lpad}/>
 
         <center>
           {/* Table below card for navigation  */}

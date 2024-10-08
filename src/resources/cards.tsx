@@ -10,6 +10,9 @@ export type Deck = {
      * The number of cards in the set.  Always starts at 1 and the value of `cards` is the set's inclusive upper bound.
      */
     cards: number
+    /**
+     * The root URL from which to fetch the card images.
+     */
     root: string
     /**
      * The number of digits for cards.  Numbers will be filled with this many leading zeroes.
