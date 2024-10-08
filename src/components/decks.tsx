@@ -10,8 +10,8 @@ export default function DeckList() {
             <div className={styles.deckcontainer} key={element.title}>
             <Link href={`/cards/${element.title}/${startCard}`} suppressHydrationWarning>
                 <li className={styles.deckslist} key={element.title}>
-                <h2>
-                    {element.title}
+                <h2 className={styles.prettyTitle}>
+                    {element.prettyTitle}
                 </h2>
                 <div className={styles.deckdescription}>manufacturer: {element.manufacturer}</div>
                 <div className={styles.deckdescription}>year: {element.year}</div>

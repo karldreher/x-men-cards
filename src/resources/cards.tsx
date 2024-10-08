@@ -1,5 +1,8 @@
 export type Deck = {
-    //TODO Pretty Title, but title must be maintained for routing
+    /**
+     * The pretty title of the set. 
+     */
+    prettyTitle: string
     /**
      * The title of the set.  A string of letters and numbers only.
      */
@@ -36,6 +39,7 @@ type Decks = Deck[]
 
 export const deckList: Decks = [
     {
+        prettyTitle: "X-Men '91",
         title: "xmen91",
         manufacturer: "Comic Images",
         year: 1991,
@@ -44,6 +48,7 @@ export const deckList: Decks = [
         lpad: 2
     },
     {
+        prettyTitle: "X-Men '92",
         title: "xmen92",
         manufacturer: "Impel",
         year: 1992,
@@ -52,6 +57,7 @@ export const deckList: Decks = [
         lpad: 2
     },
     {
+        prettyTitle: "X-Men '93",
         title: "xmen93",
         manufacturer: "Skybox",
         year: 1993,
@@ -60,6 +66,7 @@ export const deckList: Decks = [
         lpad: 2
     },
     {
+        prettyTitle: "Fleer '94",
         title: "fleer94",
         manufacturer: "Fleer",
         year: 1994,
@@ -68,6 +75,7 @@ export const deckList: Decks = [
         lpad: 3
     },
     {
+        prettyTitle: "Timelines '97",
         title: "timelines97",
         manufacturer: "Fleer/Skybox International",
         year: 1997,
