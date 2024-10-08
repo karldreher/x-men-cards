@@ -15,6 +15,7 @@ export default function TradingCard(props: TradingCardProps) {
   const image = props.image
   const [flip, setFlip] = useState(false);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies(image): Unknown why raised by Biome, this is minimally scoped
   useEffect(() => {
     //always ensure that when image changes, we land on (front) card
     setFlip(false)
