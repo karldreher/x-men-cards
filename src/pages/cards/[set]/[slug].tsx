@@ -8,7 +8,7 @@ import NavButton from '@/components/navbutton';
 import Header from '@/components/header';
 
 import { Table, TableCell, TableRow } from '@mui/material';
-import deckList from '@/resources/cards';
+import { deckList } from '@/resources/cards';
 
 export default function Home() {
 

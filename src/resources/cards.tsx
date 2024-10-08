@@ -1,4 +1,4 @@
-type Deck = {
+export type Deck = {
     //TODO Pretty Title, but title must be maintained for routing
     /**
      * The title of the set.  A string of letters and numbers only.
@@ -31,7 +31,7 @@ type Deck = {
 }
 type Decks = Deck[]
 
-const deckList: Decks = [
+export const deckList: Decks = [
     {
         title: "xmen91",
         manufacturer: "Comic Images",
@@ -74,4 +74,3 @@ const deckList: Decks = [
     }
 ]
 
-export default deckList

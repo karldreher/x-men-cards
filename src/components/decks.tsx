@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from '../styles/decks.module.css'
-import deckList from '@/resources/cards'
+import { deckList } from '@/resources/cards'
 
 export default function DeckList() {
     const links = deckList.map((element) => {
