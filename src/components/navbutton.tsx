@@ -10,6 +10,7 @@ type NavButtonProps = {
      * The number of zeros to pad the image number with.
      */
     lpad: number
+    disabled: boolean
 }
 
 function NavButton(props: NavButtonProps) {
@@ -28,6 +29,11 @@ function NavButton(props: NavButtonProps) {
     // Handle the button click event.
     const handleClick = () => {
         router.push(linkTarget)
+    }
+    if (props.disabled) {
+        return (
+            <Button disabled>{props.direction}</Button>
+        )
     }
     return (
         <Button onClick={handleClick}>{props.direction}</Button>

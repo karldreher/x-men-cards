@@ -22,9 +22,18 @@ export default function Home() {
   if (set===undefined || set===""){
     router.push('/')
   }
-  const root = deckList.filter(a=>a.title===set)[0].root
-  const lpad = deckList.filter(a=>a.title===set)[0].lpad
+  // Deck Metadata
+  const deck = deckList.filter(a=>a.title===set)[0]
+  const root = deck.root
+  const lpad = deck.lpad
+  const firstImage = "1".padStart(lpad, "0")
+  const lastImage = deck.cards.toString().padStart(lpad, "0")
+  // Selected image from URL
   const image = splitPath[splitPath.length - 1]
+
+  if (Number(image) > deck.cards || Number(image) < 1){
+    router.push("/404")
+  }
   return (
     <>
       <Head>
@@ -45,9 +54,9 @@ export default function Home() {
             <TableRow>
               
               {/* Navbutton for previous card  */}
-              <TableCell>
-              <NavButton direction="prev" lpad={lpad}/>
-              </TableCell>
+                <TableCell>
+                <NavButton direction="prev" lpad={lpad} disabled={image === firstImage} />
+                </TableCell>
 
               {/* Button for rotating the card  */}
               <TableCell>
@@ -55,9 +64,13 @@ export default function Home() {
               </TableCell>
 
               {/* Navbutton for next card */}
-              <TableCell>
-              <NavButton direction="next" lpad={lpad}/>
-              </TableCell>
+                <TableCell>
+                <NavButton 
+                  direction="next" 
+                  lpad={lpad} 
+                  disabled={image === lastImage}
+                />
+                </TableCell>
 
             </TableRow>
           </Table>
