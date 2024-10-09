@@ -3,9 +3,6 @@
   flex-direction: column;
   float: left;
 }
-.logoContainer:hover {
-  cursor: pointer;
-}
 
 .logo {
   display: inline-block;

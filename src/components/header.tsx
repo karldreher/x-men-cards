@@ -19,12 +19,14 @@ export default function Header() {
   return (
     <>
       {isDesktop ? (
-      <div className={styles.logoContainer}>
+      <Link href="/"><div className={styles.logoContainer}>
         <div className={styles.logo}>
-        <div className={styles.line}><Link href="/">X-MEN</Link></div>
+        
+          <div className={styles.line}>X-MEN</div>
         </div>
         <div className={`${styles.logoSub} ${styles.logoLine}`}>CARDS</div>
       </div>
+      </Link>
       ) : (
         // Kind of a todo.  Mostly, should just be a hamburger menu with "home".  
         // Worth a separate component.
