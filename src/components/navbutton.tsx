@@ -18,8 +18,6 @@ function NavButton(props: NavButtonProps) {
     const splitPath = router.asPath.split('/')
     const set = splitPath[splitPath.length - 2]
     const image = splitPath[splitPath.length - 1]
-    // TODO this is wrong, fix it later
-    // component should not load (from slug page) if we are at the last image or beginning of set.
     // TODO If next/prev is in omit list, choose next/prev again
     const prevImage = (String(Number(image) - 1)).padStart(props.lpad, "0")
     const nextImage = (String(Number(image) + 1)).padStart(props.lpad, "0")
