@@ -2,12 +2,13 @@ import {useState,useEffect} from 'react';
 import Image from 'next/image';
 import ReactCardFlip from "react-card-flip";
 import Card from '@mui/material/Card';
+import type { Deck } from '@/resources/cards';
 
-type TradingCardProps = {
+type TradingCardProps = Pick<Deck, 'root'|'title'|'lpad'> & {
+  /**
+   * The image number to display.
+   */
   image: string
-  set: string
-  root: string
-  lpad: number
 }
 
 export default function TradingCard(props: TradingCardProps) {
@@ -15,6 +16,7 @@ export default function TradingCard(props: TradingCardProps) {
   const image = props.image
   const [flip, setFlip] = useState(false);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies(image): Unknown why raised by Biome, this is minimally scoped
   useEffect(() => {
     //always ensure that when image changes, we land on (front) card
     setFlip(false)

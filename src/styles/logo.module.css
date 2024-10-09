@@ -1,0 +1,58 @@
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+.logoContainer:hover {
+  cursor: pointer;
+}
+
+.logo {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  color: red;
+  font-family: serif;
+  font-weight: bolder;
+  text-shadow: -3px 3px 0 #222, -3px 3px 0 #222, 3px 3px 0 #222, -3px 3px 0 #222,
+    -4px 4px 0 yellow, -5px 5px 0 yellow, -6px 6px 0 yellow, -10px 6px 0 yellow;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.4);
+  -webkit-transform: scaleY(0.4);
+  -moz-transform: scaleY(0.4);
+  letter-spacing: 0.1rem;
+  transform: perspective(300px) rotateY(50deg) rotateX(25deg) scale(0.6);
+  text-align: center;
+  font-size: 169px;
+  z-index: -1;
+}
+
+.logoSub {
+  display: inline-block;
+  z-index: 1;
+  margin-top: -1rem;
+  margin-left: 10rem;
+  font-weight: bolder;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-weight: 100;
+}
+
+.logoLine {
+  display: inline-block;
+}
+
+.mobileLogoContainer {
+  display: flex;
+  flex-direction: column;
+}
+.mobileLogo {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

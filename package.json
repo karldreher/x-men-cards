@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "npm run biome lint",
-    "format": "npm run biome format"
+    "format": "npm run biome format --write ./src"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
