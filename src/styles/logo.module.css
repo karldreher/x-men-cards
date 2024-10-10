@@ -16,7 +16,6 @@
   text-shadow: -3px 3px 0 #222, -3px 3px 0 #222, 3px 3px 0 #222, -3px 3px 0 #222,
     -4px 4px 0 yellow, -5px 5px 0 yellow, -6px 6px 0 yellow, -10px 6px 0 yellow;
   line-height: 0.8em;
-  letter-spacing: 0.1em;
   letter-spacing: 0.1rem;
   transform: perspective(300px) rotateY(50deg) rotateX(25deg) scale(0.6);
   -webkit-transform: perspective(300px) rotateY(50deg) rotateX(25deg) scale(0.6);
